@@ -1,0 +1,54 @@
+###
+#
+#
+# @author
+# @date   2018-12-03 23:02:56
+##
+module_name: Users
+tables:
+    users:
+        model:
+            class: User
+        repository:
+            class: User
+        controller:
+            class: Enterprise/User
+        attrs:
+            name: 用户
+            desc: 存储用户信息
+            remark: ['']
+        index:
+            id: { type: primary, fields: id }
+            name: { type: unique, fields: name }
+            email: { type: unique, fields: email }
+        fields:
+            id: { }
+            name: { name: 用户名, type: varchar }
+            mobile: { require: false, name: 手机号码, type: varchar }
+            email: { name: 邮箱, type: varchar, size: 128 }
+            email_verified_at: { name: 邮箱验证于, type: timestamp }
+            password: { name: 密码, type: varchar, size: 128 }
+            remember_token: { name: 记住Token, type: varchar, size: 100 }
+            deleted_at: { }
+            created_at: { }
+            updated_at: { }
+
+
+    password_resets:
+        model:
+            class: PasswordReset
+        repository:
+            class: PasswordReset
+        controller:
+            class: Enterprise/PasswordReset
+        attrs:
+            name: 重置密码
+            desc: 存储用户重置密码信息
+            remark: ['']
+        index:
+            id: { type: primary, fields: id }
+            name: { type: unique, fields: name }
+        fields:
+            email: { name: 邮箱, type: varchar, size: 128 }
+            token: { name: Token, type: varchar, size: 100 }
+            created_at: { }

@@ -1,0 +1,82 @@
+###
+# 一个 controller 一个 api.schema 文件
+#
+# @author Charsen
+# @data 2018-12-03 23:27:20
+##
+controller:
+    code:
+    class: User
+    name: 用户管理
+    desc: []
+actions:
+    create:
+        name: 创建表单
+        desc: []
+        prototype: ''
+        request: [GET, users/create]
+        url_params: []
+        body_params: []
+    edit:
+        name: 编辑表单
+        desc: []
+        prototype: ''
+        request: [GET, users/{user}/edit]
+        url_params: []
+        body_params: []
+    index:
+        name: 用户列表
+        desc: []
+        prototype: ''
+        request: [GET, users]
+        url_params: []
+        body_params: []
+    trashed:
+        name: 回收站
+        desc: []
+        prototype: ''
+        request: [GET, users/trashed]
+        url_params: []
+        body_params: []
+    store:
+        name: 添加用户
+        desc: []
+        prototype: ''
+        request: [POST, users]
+        url_params: []
+        body_params: []
+    update:
+        name: 更新用户
+        desc: []
+        prototype: ''
+        request: [POST, users/{user}]
+        url_params: []
+        body_params: []
+    show:
+        name: 查看用户
+        desc: []
+        prototype: ''
+        request: [GET, users/{user}]
+        url_params: []
+        body_params: []
+    destroy:
+        name: 删除用户
+        desc: []
+        prototype: ''
+        request: [POST, users/{user}]
+        url_params: []
+        body_params: []
+    destroyBatch:
+        name: 批量删除
+        desc: []
+        prototype: ''
+        request: [POST, users/delete/batch]
+        url_params: []
+        body_params: []
+    restoreBatch:
+        name: 批量恢复
+        desc: []
+        prototype: ''
+        request: [POST, users/restore/batch]
+        url_params: []
+        body_params: []

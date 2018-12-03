@@ -1,0 +1,16 @@
+###
+# 一个 controller 一个 api.schema 文件
+##
+controller:
+    code:
+    class: Authentication
+    name:  认证
+    desc: []
+actions:
+    authenticate:
+        name: 登陆
+        desc: []
+        request: [POST, authenticate]
+        body_params:
+            mobile: [ 手机号, 13311112222 ]
+            password: [ 密码, 12345678 ]
