@@ -24,8 +24,8 @@ tables:
         fields:
             id: { }
             name: { name: 用户名, type: varchar }
-            mobile: { require: false, name: 手机号码, type: varchar }
-            email: { name: 邮箱, type: varchar, size: 128 }
+            mobile: { name: 手机号码, type: varchar }
+            email: { require: false, name: 邮箱, type: varchar, size: 128 }
             email_verified_at: { name: 邮箱验证于, type: timestamp }
             password: { name: 密码, type: varchar, size: 128 }
             remember_token: { name: 记住Token, type: varchar, size: 100 }

@@ -14,12 +14,21 @@ _PS：随时可能调整自定义的类库及代码结构。_
 ## 3. 初始化
 
 ### 3.1 Generate JWT secret key
-```bash
+```sh
 php artisan jwt:secret
 ```
 
 ### 3.2 修改 .env 配置，执行数据迁移
 
+### 3.3 设置 scaffold 开发者信息
+```sh
+php artisan scaffold:init `author`
+```
+
+### 3.4 发布 scaffold 前端公共资源包到 public 目录下：
+```sh
+php artisan vendor:publish --provider=Charsen\\Scaffold\\ScaffoldProvider --tag=public --force
+```
 
 ## 4. 使用
 
@@ -31,4 +40,3 @@ php artisan jwt:secret
 ### 4.2 Scaffold 文档
 - [README](https://github.com/charsen/laravel-scaffold/blob/master/README.md)
 
-### 4.3 
